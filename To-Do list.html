@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            background-color: white;
+            color: black;
+            font-size: 1rem;
+        }
+        body{
+            font-size: 2rem;
+            background-image: url("bgimage.jpg");
+            background-repeat: no-repeat;
+            background-size: cover; 
+        }
+        .main{
+            display: flex;
+        }
+        
+        #new-task-form{
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 21%;
+            left: 11%;
+            width: 15rem;
+            height: 230px;
+            background-color: white;
+            border-radius: 5px;
+        }
+
+        #title{
+            margin-left: 5px;
+            margin-right: 5px;
+            width: 226px;
+            top: 10px;
+        } 
+        #new-task-input{
+        height: 10rem;
+        margin-left: 5px;
+        margin-right: 5px;
+        width: 226px;
+        }
+        #new-task-submit{
+            position: absolute;
+            background-color: greenyellow;
+            margin-left: 5px;
+            margin-right: 5px;
+            width: 227px;
+            border-radius: 5px;
+        }
+
+        .task{
+            display: flex;
+        }
+
+        .task-list{
+            position: absolute;
+            top: 27%;
+            left: 25%;
+        }
+
+        .description{
+            position: absolute;
+            left: 25%;
+            top: 20%;
+        }
+
+        .content{
+            width: 33rem;
+        }
+        .text, .title_input{
+            height: 50px;
+            width: 100%;
+        }
+        .delete{
+            background-color: red;
+            color: white;
+            height: 53px;
+            width: 53px;
+            font-size: 45px;
+        }
+        ul{
+            display: flex;
+            list-style: none;
+            color: white;
+        }
+        ul li{
+
+            margin-right: 15rem;
+        }
+    </style>
+    
+    <header>
+        <h1 style="position: relative; left:10rem;">To-Do List</h1>
+    </header>
+
+    <section class="main">
+        <form id="new-task-form">
+            <input type="text" id="title" placeholder="Title" required><br>
+            <textarea name="desc" id="new-task-input" rows="7" placeholder="Description"></textarea><br>
+            <input type="submit" id="new-task-submit" value="Save">
+        </form>
+        
+        <div class="description">
+            <ul>
+                <li>Title</li>
+                <li>Description</li>
+                <li>Delete</li>
+            </ul>
+            <hr color="white" style="width: 49rem;">
+        </div>
+            <div class="task-list">
+                <div id="tasks">
+                    
+                 </div>
+                   
+            </div>
+        </div>
+        
+    </section>
+    <script src="To-Do list.js"></script>
+</body>
+</html>
