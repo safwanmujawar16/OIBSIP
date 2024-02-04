@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>signup page</title>
+</head>
+<body bgcolor="black">
+    <style>
+        .box{
+            left: 35%;
+            top: 20%;
+            width: 20rem;
+            position: absolute;
+            border: 2px solid white;
+            color: white;
+        }
+        input{
+            border: 1px solid grey;
+        }
+        .reg{
+            height: 30px;
+            width: 100%;
+            background: blue;
+            color: white;
+            margin-top: 15px;
+        }
+    </style>
+    <div class="box">
+        <h1>Register Here</h1>
+        <form action="" method="post" id="signup">
+            {% csrf_token %}
+            <H3>Username</H3>
+            <input type="text" name="Username" placeholder="username"><br>
+            <h3>Email</h3>
+            <input type="email" name="Email" placeholder="email"><br>
+            <h3>Password</h3>
+            <input type="text" name="password" placeholder="password"><br>
+            <h3>Confirm Password</h3>
+            <input type="text" name="confirm"><br>
+            <input type="submit" value="Register" class="reg"> 
+        </form>
+    </div>
+</body>
+</html>
